@@ -1,0 +1,157 @@
+.navbar-brand p {
+    color: white;
+    font-size: 1.5em;
+    margin-top: -0.2em;
+}
+.navbar-brand img{
+    width: 30px;
+    height: auto;
+}
+.register {
+	padding-top: 3em;
+}
+.register i {
+	border: 5px solid grey;
+	border-radius: 50%;
+	color: grey;
+	padding: 0.2em;
+}
+.register h4 {
+	padding-top: 0.2em;
+	font-size: 2.5em;
+	color: grey;
+}
+.name {
+	padding-top: 2em;
+}
+.lastname {
+	padding-top: 2em;
+}
+.name i {
+	position: absolute;
+	right: 0.7em;
+	top: 3.7em;
+	z-index: 100;
+	color: rgb(129, 200, 2);
+}
+.name  input {
+	position: relative;
+	font-size: 2em;
+	padding: 30px 0 30px 10px;
+}
+.lastname input {
+	font-size: 2em;
+	padding: 30px 0 30px 10px;
+}
+.email i{
+	position: absolute;
+	right: 0.7em;
+	top: 40%;
+	z-index: 100;
+	color: rgb(129, 200, 2);
+}
+.email input {
+	position: relative;
+	font-size: 2em;
+	padding: 30px 0 30px 10px;
+}
+.bg-button button {
+	font-size:2em;
+	padding: 0.3em;
+	background-color:rgb(129, 200, 2);
+
+}
+.bg-button a {
+	text-decoration: none;
+}
+.footer {
+    margin-top: 7em;
+    background: black;
+    height: 4em;
+}
+.footer h6 {
+    color: white;
+    margin-right: 15em;
+    padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 1025px){
+.nav {
+    height: 7em;
+    padding-top: 2em;
+}
+.navbar-header {
+    padding-top: 2em;
+}
+.register {
+	text-align: center;
+}
+
+.footer {
+    height: 11em!important;
+    margin-top: 12em;
+}
+.footer h6 {
+    font-size: 1.2em;
+    padding-top: 3em;
+    margin-left: 12em;
+}
+@media only screen and (max-width: 769px){
+.navbar-brand p {
+    color: white;
+    font-size: 1em;
+    margin-top: -0.2em;
+}
+.navbar-brand img{
+    width: 23px;
+    height: auto;
+}
+.nav li {
+    font-size: 0.9em;
+}
+
+.bg-button button {
+    width: 70%;
+    margin: 0 auto;
+}
+.bg-b button {
+    width: 70%;
+    margin: 0 auto;
+}
+.footer {
+    height: 8.5em;
+}
+.footer h6 {
+    font-size: 1em;
+    padding-top: 2em;
+    margin-left: 12em;
+}
+}
+
+@media only screen and (max-width: 426px){
+.navbar-brand {
+    padding-top: 0;
+}
+.nav {
+    height: 100vh;
+}
+.nav li {
+    text-align: center;
+}
+
+.footer {
+    height: 14em;
+}
+.footer h6 {
+    font-size: 0.7em;
+    padding-top: 5em;
+    margin-left: 12em;
+}
+}
+
+@media only screen and (max-width: 376px){
+.bg-button button {
+    width: 80%!important;
+    margin: 0 auto;
+}	
+}

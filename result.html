@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="rezultati.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tasha">
+
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+
+			</button>
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">
+					<p>RETR <img src="smile.png"><img style ="width: 40px; height: auto; margin-left: -0.3em;"src="sad.png">SPECT</p>
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="tasha">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://codepreneurs.co/"><i class="fa fa-home" aria-hidden="true"></i>  Academy for programing</a></li>
+					<li><a href="https://brainster.co/courses#!/grid/infinite/throttle:30/threshold:30/"><i class="fa fa-users" aria-hidden="true"></i> Courses</a></li>
+					<li><a style="color: white;" href="FirstProject.html">ENG</a></li>
+					<li><a>/</a></li>
+					<li><a style="color: white;" href="PrvProekt.html">MKD</a></li>
+
+				
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container rezult">
+		<div class="col-md-12">
+			<div class="row">
+			<div class="col-md-12 text-center">
+				<img class="slika" src="" style="width: 70px; height: 70px;">
+				<br>
+				<p style="color: grey;" class=" average text-center">0.0</p>
+				<h2 class="text-center text">Just another week</h2>
+				<h3 class="text-center" style="color:grey">Keep your smile on and make the next one even better</h3>
+		    </div>
+			<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 text-center image">
+					<div class="row">
+						<div class="col-md-2 col-md-offset-1">
+						<h4>Enjoyment</h4>
+						<img class="enjoy-img" src="6.png">
+						<p class="enjoy-number">0.0</p>
+					</div>
+					<div class="col-md-2">
+						<h4>Team</h4>
+						<img class="team-img" src="7.png">
+						<p class="team-number">0.0</p>
+					</div>
+					<div class="col-md-2">
+						<h4>Productivity</h4>
+						<img class="productive-img" src="8.png">
+						<p class="productive-number">0.0</p>
+					</div>
+					<div class="col-md-2">
+						<h4>Learning</h4>
+						<img class="learning-img" src="9.png">
+						<p class="learning-number">0.0</p>
+					</div>
+					<div class="col-md-2">
+						<h4>Stress</h4>
+						<img class="stress-img" src="10.png">
+						<p class="stress-number">0.0</p>
+					</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h4 style="color:black;">If you want to measure the satisfaction of your employees, register, and we will send you the options.</h4>
+					<button class="btn btn-lg"><a style="color: white;" href="Register.html">Sign Up</a></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+	<div class="container-fluid footer">
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<h6>Designed by Tasha Atanasovska</h6>
+			</div>
+		</div>		
+	</div>
+
+	<script
+ src="https://code.jquery.com/jquery-3.3.1.js"
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous"></script>
+
+
+ <script>
+ 	$( document ).ready(function() {
+
+           $(".enjoy-img").attr("src", localStorage.getItem("enjoy"));
+           $(".team-img").attr("src", localStorage.getItem("team-work"));
+           $(".productive-img").attr("src", localStorage.getItem("productive"));
+           $(".learning-img").attr("src", localStorage.getItem("learn"));
+           $(".stress-img").attr("src", localStorage.getItem("stress"));
+
+
+
+
+
+           $(".enjoy-number").html(localStorage.getItem("enjoy-Number"));
+           $(".team-number").html(localStorage.getItem("team-Number"));
+           $(".productive-number").html(localStorage.getItem("productive-Number"));
+           $(".learning-number").html(localStorage.getItem("learning-Number"));
+           $(".stress-number").html(localStorage.getItem("stress-Number"));
+
+           $(".average").html(average());
+
+           function average(sum,b) {
+               var sum = (parseInt(localStorage.getItem("enjoy-Number")) + parseInt(localStorage.getItem("team-Number")) + parseInt(localStorage.getItem("productive-Number")) + parseInt(localStorage.getItem("learning-Number")) + parseInt(localStorage.getItem("stress-Number"))) ;
+               var b = 5
+               var rezult = " ";
+              return rezult = sum / b;
+
+           };
+
+           	$(".slika").html(averageImg (average()));
+           	$(".text").html(averageImg (average()));
+           function averageImg(rezult){
+           	if(rezult <= 1){
+           		$(".slika").attr("src" , "6.png");
+           		$(".text").html( "Please get me out of here!").css("color" , "#f93131");
+           	}else if(rezult > 1 && rezult <= 2){
+           		$(".slika").attr("src" , "7.png");
+           		$(".text").html("No arguments, no party either").css("color" , "#FF9900");
+           	}else if(rezult > 2 && rezult <= 3){
+           		$(".slika").attr("src" , "8.png");
+           		$(".text").html("The workload was all right, I did just fine").css("color" ,  "#9ba541");
+           	}else if(rezult > 3 && rezult <= 4){
+           		$(".slika").attr("src" , "9.png");
+           		$(".text").html("I went the extra mile!").css("color" , "#03964A" );
+           	}else if(rezult > 4 && rezult <=5){
+           		$(".slika").attr("src" , "10.png");
+           		$(".text").html("I'm growing a monster knowledge base!!!").css("color" ,"#E802E1" );
+           	}
+           }
+
+           
+       });
+ </script>
+
+</body>
+</html>

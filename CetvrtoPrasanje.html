@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Четврто Прашање</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="PrvoPrasanje.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tasha">
+
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+
+			</button>
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">
+					<p>RETR <img src="smile.png"><img style ="width: 40px; height: auto; margin-left: -0.3em;"src="sad.png">SPECT</p>
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="tasha">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://codepreneurs.co/"><i class="fa fa-home" aria-hidden="true"></i> Академија за Програмирање</a></li>
+					<li><a href="https://brainster.co/courses#!/grid/infinite/throttle:30/threshold:30/"><i class="fa fa-users" aria-hidden="true"></i> Курсеви</a></li>
+					<li><a style="color: white;" href="FirstProject.html">ENG</a></li>
+					<li><a>/</a></li>
+					<li><a style="color: white;" href="PrvProekt.html">MKD</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row text-center">
+			<div class="col-md-6 col-md-offset-3 text-center bg-question">
+				<i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
+				<p>Како се чуствуваш, колку научи оваа недела?</p>
+				<div class="main-slider">
+					<input type="range" class="slider" id="slider-main"
+						min="0" step="1" max="100" />
+					<h4><span id="print-text" style="color: #9ba541">Уште една обична работна недела</span></h4>
+				</div>	   	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-4 col-xs-6 bg-button">
+				<a href="TretoPrasanje.html"><button style="padding: 13px 0;" class="btn btn-md btn-block"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</button></a>
+			</div>
+			<div class="col-md-2 col-xs-6 bg-b">
+				<a href="PettoPrasanje.html"><button style="padding: 13px 0;" class="btn btn-md btn-block">Следно <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+			</div>
+		</div>
+	</div>
+
+
+	
+	<div class="container-fluid footer">
+		<div class="row">
+			<div class="col-md-12  col-xs-12 text-right">
+				<h6>Designed by Tasha Atanasovska</h6>
+			</div>
+		</div>		
+	</div>
+	
+
+	<script>
+	var slider = document.getElementById("slider-main");
+    var outputText = document.getElementById("print-text");
+
+    slider.oninput = function() {
+    keeper(this.value);
+}
+function keeper(value) {
+    if(value<=19) {
+        outputText.innerHTML= "Неделава беше ужасна";
+        outputText.style.color = "#f93131";
+        slider.setAttribute("id", "slider2");
+        slider.style.background  = "#f93131";
+        $(slider).removeClass();
+        $(slider).addClass("slider-main slider3");
+        localStorage.setItem('learn', "6.png");
+        localStorage.setItem('learning-Number', "1");
+
+    } else if (value<= 40){
+        outputText.innerHTML= "Можеше и подобро";
+        outputText.style.color = "#FF9900";
+        slider.style.background  = "#FF9900";
+        // $('.slider').attr("class", "slider2");
+        // $('.slider3').attr("class", "slider2");
+         $(slider).removeClass();
+        $(slider).addClass("slider-main slider2");
+        localStorage.setItem('learn', "7.png");
+        localStorage.setItem('learning-Number', "2");
+    
+    } else if (value<= 60){
+        outputText.innerHTML= "Уште една обична работна недела";
+        outputText.style.color = "#9ba541";
+        slider.style.background  = "#9ba541";
+        // $(.slider2).attr("class", "slider");
+        // $(.slider4).attr("class", "slider");
+
+         $(slider).removeClass();
+        $(slider).addClass("slider-main slider");
+        localStorage.setItem('learn', "8.png");
+        localStorage.setItem('learning-Number', "3");
+    
+    }  else if (value<= 90){
+        outputText.innerHTML= "Забавно беше";
+        outputText.style.color = "#03964A";
+        slider.style.background  = "#03964A";
+        // $(.slider).attr("class", "slider4");
+        // $(.slider5).attr("class", "slider4");
+
+         $(slider).removeClass();
+        $(slider).addClass("slider-main slider4");
+        localStorage.setItem('learn', "9.png");
+        localStorage.setItem('learning-Number', "4")
+
+    
+    }
+    else if (value<= 100){
+        outputText.innerHTML= "WOW, одлична недела";
+        outputText.style.color = "#38FF92";
+        slider.style.background  = "#38FF92";
+        // $(.slider4).attr("class", "slider5");
+         $(slider).removeClass();
+        $(slider).addClass("slider-main slider5");
+        localStorage.setItem('learn', "10.png");
+        localStorage.setItem('learning-Number', "5");
+
+    
+    }
+
+}
+	</script>
+	
+
+</body>
+</html>
